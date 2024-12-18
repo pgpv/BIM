@@ -1,0 +1,8 @@
+1. cd into the project's folder and do
+    npm install
+2. start psql and run the following command
+    \i /your/project/folder/bim/scripts/dbinit.sql
+3. edit the file bim/db/db.js with your postgres username/password
+4. in the project's folder do
+    npm start
+5. test ahead, using you browser and/or curl. you can check the initial db data in the dbinit.sql file and all the endpoints are in the files in the routes directory and (I think and hope) are all very self-explanatory but, just as examples, you can visit http://localhost:3000/wine/get-all to get a list of all wines or http://localhost:3000/winemaker/get-by-name/Jacques to get information about the winemaker Jacques or, using curl, do curl -X POST http://localhost:3000/wine/add/SpecialWine/Manuel/crop1/2020/20000/label1 to add a new wine.
